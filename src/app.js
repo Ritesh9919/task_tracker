@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://task-tracker-12mern.netlify.app/',
     credentials:true,
     
     
