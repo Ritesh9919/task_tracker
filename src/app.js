@@ -12,6 +12,11 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
+
+
+app.get('/', (req, res)=> {
+    res.send("Hello World")
+})
 app.use(cors({
     origin:'https://task-tracker-12mern.netlify.app',
     credentials:true,
