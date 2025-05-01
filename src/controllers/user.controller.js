@@ -43,11 +43,11 @@ export const login = async(req, res, next)=> {
         const expiryDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
         res.cookie('token',token, {
             httpOnly:true,
-            secure: process.env.NODE_ENV == 'production',
+            secure: process.env.NODE_ENV === 'production',
             expires:expiryDate,
             maxAge: 24 * 60 * 60 * 1000,
             path:'/',
-            domain:process.env.NODE_ENV == 'production'? 'https://task-tracker-12mern.netlify.app':'localhost'
+            domain:process.env.NODE_ENV == 'production'? 'task-tracker-12mern.netlify.app':undefined
 
             
             
